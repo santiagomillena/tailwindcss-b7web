@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World, Tailwind ver.</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-blue-950 w-screen h-screen max-w-full "> <!-- A width: 100vw sempre abrange toda a largura da viewport, potencialmente causando barras de rolagem horizontais. -->
+    <div>
+        <h1 class="text-3xl font-bold text-green-200 border-4 border-indigo-200 border-t-indigo-500 border-b-cyan-400">
+            Hello world!
+        </h1>
+        <div class="bg-white border border-gray-500 m-4 w-96 rounded-md p-4">
+            <div class="inline-block">
+                <img class="w-14 h-14 rounded-full" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+            </div>
+            <div class="inline-block ml-5">
+                <p class="pb-2">Rafaela Silva</p>
+                <p class="text-gray-500">Te mandou um convite</p>
+            </div>
+            <div class="mt-4">
+                <button class="bg-blue-800 text-white rounded-md px-5 py-2">Aceitar</button>
+                <button class="border border-gray-300 rounded-md ml-3 px-5 py-2">Negar</button>
+            </div>
+        </div>
+
+        <div>
+            <p class="bg-yellow-100 text-yellow-700 w-[425px] border-l-4 border-l-yellow-400 m-2 p-2">Você não tem mais acesso. <a href="#" class="underline">Faça o upgrade da sua conta</a></p>
+        </div>
+
+        <p
+            class="bg-blue-950 text-white w-36 p-2 mt-4 mb-4 border-4 border-t-red-600 border-r-yellow-300 border-b-indigo-600 border-l-lime-500 ml-3">
+            Inicio</p>
+        <p class="bg-blue-950 text-white w-36 my-4">Inicio</p>
+
+        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque ea illum ex delectus? Nisi ex nemo
+            libero quidem
+            iste aut, eligendi ab recusandae a harum, excepturi, inventore velit magnam.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, repellat ipsa praesentium dolore harum
+            excepturi
+            eligendi! Tempore labore neque exercitationem reiciendis nisi dolor, quo velit sapiente ab itaque ut odio!
+        </p>
+        <div>
+            <input type="text" class="outline outline-green-500 ml-3 mt-6">
+            <div>
+                <button class="bg-orange-500 text-white rounded-md px-2 py-2 m-6">Clique aqui</button>
+                <button class=" text-white rounded-md px-2 py-2 m-6 border border-red-600">Clique aqui</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Tela de login -->    
+    <section class="bg-gray-900 text-white mt-5 p-4 w-full">
+
+        <h1 class="text-3xl font-bold text-center">Sistema de Login</h1>
+
+        <form class="container mx-auto sm:w-5/6" action="">
+
+            <div class="my-6":>
+                <label class="block text-lg mb-2" for="iemail">Endereço de e-mail</label>
+                <input class="bg-gray-700 w-full rounded-md text-lg p-1 border border-gray-600 focus:outline-none focus:border-yellow-500" type="email" name="iemail" id="iemail">
+            </div>
+
+            <div class="my-6">
+                <label class="block text-lg mb-2" for="userpassword">Senha</label>
+                <input class="bg-gray-700 w-full rounded-md text-lg p-1 border border-gray-600 focus:outline-none focus:border-yellow-500" type="password" name="userpassword" id="userpassword">
+            </div>
+
+            <div class="my-6">
+                <button class="w-full rounded-md text-lg font-bold border-none bg-yellow-500 rounded-s p-1" type="button">Entrar</button>
+            </div>
+        </form>
+        <p class="text-center">Não é membro? <a class="text-yellow-500 text-bold" href="#">Faça seu cadastro agora</a></p>
+    </section>
+<!-- Responsividade; container, sm:bg, md:bg -->
+    <section>
+        <div class="container mx-auto bg-blue-400 sm:bg-blue-800 md:bg-green-400">
+            ...
+        </div>
+    </section>
+
+<!-- Containers, Display, Flexbox no Tailwind -->
+    <section class="container mx-auto">
+        <div class="w-full flex justify-center items-center"><!--automaticamente coloca um item um do lado do outro. A propriedade flex do CSS é uma ferramenta que permite organizar elementos de forma flexível dentro de um container. Essa flexibilidade permite que os itens alterem a sua largura e altura para que o layout se adapte a qualquer tela. 
+        O Flexbox é baseado em direções "flex flow" e não nas direções "block" e "inline" do leiaute padrão. Para utilizar o Flexbox, é preciso declarar propriedades no elemento-pai (flex container) e nos elementos-filhos (flex items).-->
+            <div class="rounded-md bg-blue-500 text-white p-4">01</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">02</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">03</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">04</div>
+        </div>
+<!-- GridCSS no Tailwind -->
+        <div class="grid grid-cols-3 gap-3">
+            <div class="col-span-full rounded-md bg-blue-500 text-white p-4">01</div>
+            <div class="col-span-2 rounded-md bg-blue-500 text-white p-4">02</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">03</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">04</div>
+            <div class="col-start-2 col-end-4 rounded-md bg-blue-500 text-white p-4">05</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">06</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">07</div>
+            <div class="rounded-md bg-blue-500 text-white p-4">08</div>
+            <div class="col-span-full rounded-md bg-blue-500 text-white p-4">09</div>
+        </div>
+    </section>
+
+<!-- Propriedades de background -->
+    <section>
+        <div class="container mx-auto">
+
+            <div class="w-60 h-80 bg-cover bg-center bg-[url(https://images.pexels.com/photos/29894015/pexels-photo-29894015.jpeg)]">
+            </div>
+            
+        </div>
+
+<!-- Gradientes -->
+        <div class="container mx-auto">
+
+            <div class="w-60 h-60 bg-gradient-to-r from-sky-500 to-indigo-600">
+            </div>
+            
+        </div>
+
+<!-- Animações com Tailwind -->
+        <div class="container mx-auto">
+
+            <div class="transition-all duration-1000 ease-linear w-40 h-24 bg-green-500 hover:w-full ">
+            </div>
+            <div class="animate-pulse w-40 h-24 bg-green-700 hover:w-full ">
+            </div>
+            <div class="w-40 h-24 bg-green-900 hover:animate-bounce ">
+            </div>
+            
+        </div>
+
+    </section>
+
+<!-- Trabalhando com SVGs -->
+    <section>
+        <div class="container mx-auto">
+            <svg class="w-24 h-24 fill-blue-600 stroke-cyan-900" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 3 3m0 0 3-3m-3 3v-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+              </svg>
+              <svg class="w-24 h-24 fill-green-700 stroke-black stroke-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                <path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z" clip-rule="evenodd" />
+              </svg>                            
+        </div>
+    </section>
+
+<!-- Exercício SVG -->
+<section>
+    <div class="w-12 h-12 border-8 border-blue-200 border-r-blue-600 border-t-blue-600 rounded-full hover:animate-spin">
+
+    </div>
+    <img class="w-20 h-20 hover:animate-spin" src="https://cdn-icons-png.flaticon.com/512/11524/11524253.png" alt="">
+
+    <!-- ... -->
+
+    <div class="relative rounded-xl overflow-auto p-8">
+        <div class="flex items-center justify-center">
+            <button type="button"
+                class="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-white bg-indigo-500"
+                disabled>
+                <svg class="motion-reduce:hidden hover:animate-spin -ml-1 mr-3 h-5 w-5 text-white" fill="none"
+                    viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                    </circle>
+                    <path class="opacity-75" fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                    </path>
+                </svg>
+                Processing...
+            </button>
+
+</section>
+
+<!-- Exercicio Hero Card -->
+ <section class="container mx-auto">
+
+    <div class=" bg-slate-800 text-center p-4 rounded-lg overflow-hidden border border-gray-700 md:flex md:p-0">
+
+        <div id="foto"
+        >
+            <img class="w-24 h-24 rounded-full mx-auto md:w-48 md:h-auto md:rounded-none" src="lara-croft.jpg"
+                alt="Exploradora Lara Croft">
+        </div>
+
+        <div class="grow pt-6 text-center md:p-8 md:text-left">
+            <blockquote class=" text-lg text-white block">"O extraordinário está no que fazemos, não em quem somos"
+            </blockquote>
+            <p class="text-sky-400 font-bold mt-3">Lara Croft</p>
+            <p class="text-gray-500">Tomb Raider</p>
+    
+        </div>
+    
+    </div>
+ </section>
+
+ <!-- Hover e estados do elemento, input; placeholder, input;file -->
+ <section>
+
+    <div class="container mx-auto">
+        <button class="bg-red-400 p-3 hover:bg-blue-300 active:bg-green-300 ">Clique aqui</button>
+        <input type="text" class="rounded-md p-4 w-full h-7 border-2 border-yellow-500 m-3  disabled:bg-red-300 focus:outline-none focus:border-green-500 placeholder:text-blue-300 placeholder:italic text-green-700" placeholder="Digite aqui" >
+
+        <input type="file" name="ifile" id="ifile" class="file:bg-yellow-500 bg-indigo-700 text-green-300">
+
+
+        <!-- Placeholder do site do tailwind -->
+        <label class="relative block">
+            <span class="sr-only">Search</span>
+            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+              <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20"><!-- ... --></svg>
+            </span>   
+            
+            <input class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Search for anything..." type="text" name="search"/>
+          </label>
+    </div>
+ </section>
+
+<!-- Group Hover -->
+ <section class="mt-2">
+    <div class="container mx-auto">
+
+        <div class="group bg-slate-700 p-3 hover:bg-green-400 dark:bg-blue-500">
+            <p class="group-hover:text-white text-black">Texto 1</p>
+            <p class="group-hover:text-white text-gray-500">Texto 2</p>
+        </div>
+    </div>
+ </section>
+<!-- Darkmode -Usando Color Scheme do sistema -->
+<section>
+    <div class="container mx-auto">
+
+        <div></div>
+
+    </div>
+</section>
+
+<!-- Criando componentes -->
+<section>
+    <div class="container mx-auto text-gray-500">
+        <h1 class="text-green-400">Título principal</h1>
+        <h2 class="subtitle" >Sub-título</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, esse distinctio hic aperiam rerum
+            quisquam nemo quae porro natus ipsa commodi beatae aliquam ab eaque eveniet, ipsum quidem ducimus assumenda.
+    
+        </p>
+        <h2 class="subtitle">Sub-título</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto explicabo voluptatum et magni
+            expedita? Iste esse ratione corporis dolor tempora cupiditate minima amet modi quaerat est, reprehenderit, fuga
+            iusto!
+        </p>
+        <h2 class="subtitle">Sub-título</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto explicabo voluptatum et magni
+            expedita? Iste esse ratione corporis dolor tempora cupiditate minima amet modi quaerat est, reprehenderit, fuga
+            iusto!
+        </p>
+        <h2 class="subtitle">Sub-título</h2>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam architecto explicabo voluptatum et magni
+            expedita? Iste esse ratione corporis dolor tempora cupiditate minima amet modi quaerat est, reprehenderit, fuga
+            iusto!
+        </p>
+    
+    </div>
+</section>
+</body>
+</html>
+
+<!--
+
+Gap é uma propriedade que define o espaçamento entre os elementos de um flexbox ou grid. 
+
+A principal diferença entre Flexbox e Grid é que o Flexbox é unidimensional, enquanto o Grid é bidimensional: 
+Flexbox
+Ideal para layouts em uma única dimensão, como uma linha ou uma coluna. É usado para controlar o posicionamento dos elementos com base no tamanho e altura dos itens flex.
+Grid
+Ideal para layouts complexos, como layouts base de sites, onde é preciso controlar o posicionamento dos elementos em linhas e colunas ao mesmo tempo.
+
+Flexbox
+Para centralizar um card na vertical, você pode usar display: flex; flex-direction: column; justify-content: center.
+Grid
+Para adicionar cards do lado do outro, em três colunas, você pode adicionar propriedades do CSS Grid no elemento pai, como grid-column-gap: 24px; grid-row-gap: 24px; grid-template-columns: repeat(3, 1fr).
+ 
+Se você deseja que o elemento ocupe toda a tela, independentemente do tamanho do conteúdo, o "height: 100vh" é a melhor opção. Porém, se você quer que o elemento tenha a mesma altura do elemento pai, o "height: 100%"
+
+#element {
+   width: 100vw;
+   height: 100vw;
+   max-width: 100%;
+}
+When you using CSS to make the wrapper full width using the code width: 100vw; then you will notice a horizontal scroll in the page, and that happened because the padding and margin of html and body tags added to the wrapper size, so the solution is to add max-width: 100%
+
+em input.css, pasta onde criamos os arquivos:
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+criamos:
+
+@layer components {
+    .subtitle {
+        @apply text-yellow-400 underline
+    }
+}
+
+um tipo de classe, e inserimos no html como: class="subtitle"
+-->
